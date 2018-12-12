@@ -215,14 +215,16 @@ function sumBelowTen(array){
  * @param {String}
  * @return {Number}
  */
-var moreThanTenLetters;
 
-function moreThanTenLetters(str){
+
+function moreThanTenLetters(arr){
   var moreLetters = 0;
-  for(var i = 0; i < str.length; i++){
-    
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].length > 10){
+      moreLetters++; 
+    }
   }
-    return moreLetters;
+  return moreLetters
 }
 
 /* #multiplyAll
@@ -237,7 +239,7 @@ var multiplyAll;
 function multiplyAll(arr){
   for(var i = 0; i < arr.length; i++){
     var product = 0;
-    product = arr[i] * arr[i]
+    product = arr[i].length * arr[i].length
   }
   return product
 }
