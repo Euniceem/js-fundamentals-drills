@@ -234,14 +234,14 @@ function moreThanTenLetters(arr){
  * @param {Array}
  * @return {Number}
  */
-var multiplyAll;
+// var multiplyAll;
 
 function multiplyAll(arr){
+  var product = 1;
   for(var i = 0; i < arr.length; i++){
-    var product = 0;
-    product = arr[i].length * arr[i].length
+    product = arr[i] * product;
   }
-  return product
+  return product;
 }
 
 /* #sumAllPositive
@@ -253,6 +253,16 @@ function multiplyAll(arr){
  */
 var sumAllPositive;
 
+function sumAllPositive(arr){
+  var sum = 0;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+
 /* #stringCountBelowThree
  *
  * Takes in an array of strings and returns the amount of strings that have three characters or less.
@@ -261,6 +271,10 @@ var sumAllPositive;
  * @return {Number}
  */
 var stringCountBelowThree;
+
+function stringCountBelowThree(arr){
+  
+}
 
 /* #countObjects
  *
@@ -481,8 +495,8 @@ module.exports = {
   sumBelowTen: sumBelowTen,
   moreThanTenLetters: moreThanTenLetters,
   multiplyAll: multiplyAll,
-  sumAllPositive: null,
-  stringCountBelowThree: null,
+  sumAllPositive: sumAllPositive,
+  stringCountBelowThree: stringCountBelowThree,
   countObjects: null,
   getObjectKeys: null,
   getObjectValues: null,
